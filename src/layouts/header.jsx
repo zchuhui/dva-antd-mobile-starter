@@ -6,23 +6,28 @@ import {
 
 import styles from './header.less';
 
-function Header({
-  location
-}) {
-  return (
-    <div className={styles.normal}>
-      <NavBar
-        mode="light"
-        icon={<Icon type="left" />}
-        onLeftClick={() => console.log('onLeftClick')}
-        rightContent={[
-          <Icon key="0" type="search" style={{marginRight: '16px'}} />,
-          <Icon key="1" type="ellipsis" />
-        ]}
-      >首页</NavBar>
-    </div>
-  );
+class Header extends React.Component {
+
+  render() {
+
+    const { location } = this.props;
+
+    return (
+      <div className={styles.normal}>
+        <NavBar
+          mode="light"
+          icon={<Icon type="left" />}
+          onLeftClick={() => console.log('onLeftClick')}
+          rightContent={[
+            <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
+            <Icon key="1" type="ellipsis" />
+          ]}
+        >首页</NavBar>
+      </div>
+    );
+  }
 }
+
 
 Header.propTypes = {
   location: PropTypes.object.isRequired
