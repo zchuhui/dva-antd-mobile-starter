@@ -7,6 +7,7 @@ import {
 import styles from './index.less';
 
 import Main from '../layouts/main.jsx';
+import Battery from '../components/Battery'
 
 class Index extends React.Component{
 
@@ -17,7 +18,7 @@ class Index extends React.Component{
     return (
       <Main location={location}>
         <div className={styles.normal}>
-          999
+          <Battery />
         </div>
       </Main>
     );

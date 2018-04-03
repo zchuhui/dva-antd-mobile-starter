@@ -1,0 +1,36 @@
+
+.batteryWrap{
+  padding:40px;
+}
+
+.batteryTitle{
+  text-align: left;
+  text-indent: 10px;
+
+}
+.battery{
+  position: relative;
+  height:90px;
+  width:100%;
+  border:3px solid #333;
+  padding:4px;
+  background: white;
+  margin-left:7px;
+
+  &::before{
+    content: '';
+    position: absolute;
+    left:-16px;
+    top:22px;
+    width:15px;
+    height:40px;
+    background: #333;
+  }
+
+  .electric{
+    float: right;
+    width:80%;
+    height:100%;
+    background:#e60012;
+  }
+}
